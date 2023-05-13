@@ -1,4 +1,4 @@
-# Aware Solar Challenge
+# Solar Challenge
 
 How I spent my time:
 * Sketching out data model and dashboard mockups in Figma (1 hour)
