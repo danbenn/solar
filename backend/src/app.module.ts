@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ReadingModule } from './reading/reading.module';
 import { Reading } from './reading/reading.entity';
+import { PanelModule } from './panel/panel.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { Reading } from './reading/reading.entity';
       synchronize: true,
     }),
     ReadingModule,
+    PanelModule,
   ],
   controllers: [AppController],
   providers: [AppService],
