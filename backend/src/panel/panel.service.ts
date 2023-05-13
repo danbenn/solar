@@ -1,8 +1,16 @@
 import { Injectable } from '@nestjs/common';
+import { Panel } from './panel.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class PanelService {
+  constructor(
+    @InjectRepository(Panel)
+    private respository: Repository<Panel>,
+  ) {}
+
   findAll() {
-    return `This action returns all panel`;
+    return this.respository.find();
   }
 }
